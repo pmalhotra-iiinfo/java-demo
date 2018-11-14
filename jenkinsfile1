@@ -39,4 +39,11 @@ node {
     stage("cucumber report"){
       cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'
     }
+
+   stage('Deploy to Tomcat'){
+      
+     sshagent(['tomcat']) {
+         sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@172.31.1.73:/opt/tomcat/webapps/'
+     }
+  }
 }

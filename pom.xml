@@ -186,7 +186,17 @@
 
 
     </dependencies>
-
+    <distributionManagement>
+	 <snapshotRepository>
+	   <id>nexus</id>
+	   <url>http://100.26.126.233:8081/repository/java-demo-snapshot/</url>
+	 </snapshotRepository>
+		
+	<repository>
+             <id>nexus</id>
+             <url>http://100.26.126.233:8081/repository/java-demo-release/</url>
+	</repository>
+    </distributionManagement>
     <build>
         <finalName>contact</finalName>
         <plugins>

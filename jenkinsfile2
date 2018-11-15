@@ -1,4 +1,4 @@
-node {	
+node('javaslave') {	
  stage('SCM Checkout'){
          git 'https://github.com/adghb/java-demo'
    }
